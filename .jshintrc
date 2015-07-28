@@ -1,0 +1,6 @@
+{
+    "maxerr": 100,
+    "eqnull": true,
+    "evil": true,
+    "loopfunc": true
+}
