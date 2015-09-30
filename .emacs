@@ -1,5 +1,6 @@
 ; 行番号表示
 (global-linum-mode t)
+(global-set-key "\M-g" 'goto-line)
 ; *.~ とかのバックアップファイルを作らない
 (setq make-backup-files nil)
 ; .#* とかのバックアップファイルを作らない
