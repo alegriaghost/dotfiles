@@ -1,6 +1,5 @@
-; *.~ とかのバックアップファイルを作らない
+; don't make backup files
 (setq make-backup-files nil)
-; .#* とかのバックアップファイルを作らない
 (setq auto-save-default nil)
 ; line number
 (global-linum-mode t)
