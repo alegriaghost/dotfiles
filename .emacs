@@ -1,38 +1,36 @@
-; 行番号表示
+; don't make backup files
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+; line number
 (global-linum-mode t)
 (global-set-key "\M-g" 'goto-line)
-; *.~ とかのバックアップファイルを作らない
-(setq make-backup-files nil)
-; .#* とかのバックアップファイルを作らない
-(setq auto-save-default nil)
-; package-install
-(require 'package)
-(setq package-user-dir "~/.emacs.d/elpa/")
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-; 括弧の自動補完
+; cask and pallet
+(require 'cask)
+(cask-initialize)
+(require 'pallet)
+
+; custom
+(setq php-mode-force-pear t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(require 'auto-complete-config)
+(ac-config-default)
+(ac-set-trigger-key "TAB")
+(setq ac-use-menu-map t)
+; emmet-mode setting
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
+(add-hook 'php-mode-hook 'emmet-mode)
+; brackets setting
 (electric-pair-mode 1)
-; メタキーの設定
-(when (eq system-type 'darwin)
-    (setq ns-command-modifier (quote meta)))
-; Language.
+; language setting
 (set-language-environment 'Japanese)
 (set-terminal-coding-system 'utf-8)
 (prefer-coding-system 'utf-8-unix)
 (set-keyboard-coding-system 'utf-8)
-; Coding system.
+; coding system setting
 (set-default-coding-systems 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-; Emmet
-(require 'emmet-mode)
-(add-hook 'sgml-mode-hook 'emmet-mode) ;; マークアップ言語全部で使う
-(add-hook 'css-mode-hook  'emmet-mode) ;; CSSにも使う
-(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2))) ;; indent はスペース2個
-(eval-after-load "emmet-mode"
-  '(define-key emmet-mode-keymap (kbd "C-j") nil)) ;; C-j は newline のままにしておく
-;(keyboard-translate ?\C-i ?\H-i) ;;C-i と Tabの被りを回避
-;(define-key emmet-mode-keymap (kbd "H-i") 'emmet-expand-line) ;; C-i で展開
+

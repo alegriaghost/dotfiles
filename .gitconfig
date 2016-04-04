@@ -11,3 +11,4 @@
 	trustExitCode = true
 [alias]
 	co = checkout
+	br = branch
