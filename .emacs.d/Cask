@@ -49,3 +49,4 @@
 (depends-on "neotree")
 (depends-on "atom-dark-theme")
 (depends-on "highlight-symbol")
+(depends-on "ctags")

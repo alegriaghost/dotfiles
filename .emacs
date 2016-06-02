@@ -35,5 +35,10 @@
 (set-terminal-coding-system 'utf-8)
 (set-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-
+; ctags
+(setq tags-revert-without-query t)
+(setq ctags-command "ctags -R --fields=\"+afikklmnsSzt\" ")
+(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+(global-set-key (kbd "M-.") 'ctags-search)
+; color-theme
 (load-theme 'atom-dark t)
