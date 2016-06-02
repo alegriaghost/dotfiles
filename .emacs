@@ -16,6 +16,7 @@
 (ac-config-default)
 (ac-set-trigger-key "TAB")
 (setq ac-use-menu-map t)
+(global-set-key [f8] 'neotree-toggle)
 ; emmet-mode setting
 (add-hook 'sgml-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'emmet-mode)
@@ -34,3 +35,4 @@
 (set-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+(load-theme 'atom-dark t)
