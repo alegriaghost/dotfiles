@@ -1,0 +1,5 @@
+.emacs.d/.cask/
+.emacs.d/elpa/
+.emcas.d/auto-save-list
+.emacs.d/ac-comphist.dat
+.emacs.d/recentf
