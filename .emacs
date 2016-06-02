@@ -16,6 +16,11 @@
 (ac-config-default)
 (ac-set-trigger-key "TAB")
 (setq ac-use-menu-map t)
+; neotree
+(global-set-key [f8] 'neotree-toggle)
+; emmet-mode setting
 (add-hook 'sgml-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook 'emmet-mode)
 (add-hook 'php-mode-hook 'emmet-mode)
+
+;(load-theme 'atom-dark t)
