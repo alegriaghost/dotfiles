@@ -1,0 +1,15 @@
+export PS1='\[\033[0;35m\]\u\[\033[0m\] in \[\033[0;32m\]\w\[\033[0m\] \[\033[0;36m\]$(__git_ps1)\[\033[0m\]\n$ '
+
+# git-completion.bash / git-prompt.sh
+if [ -f ~/.git_setting/git-completion.bash ]; then
+    source ~/.git_setting/git-completion.bash
+fi
+
+if [ -f ~/.git_setting/git-prompt.sh ]; then
+    source ~/.git_setting/git-prompt.sh
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
