@@ -23,9 +23,9 @@
 (add-hook 'css-mode-hook 'emmet-mode)
 (add-hook 'php-mode-hook 'emmet-mode)
 ; ctags
-(setq tags-revert-without-query t)
-(setq ctags-command "ctags -R --fields=\"+afikklmnsSzt\" ")
-(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
-(global-set-key (kbd "M-.") 'ctags-search)
+;(setq tags-revert-without-query t)
+;(setq ctags-command "ctags -R --fields=\"+afikklmnsSzt\" ")
+;(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
+;(global-set-key (kbd "M-.") 'ctags-search)
 
 ;(load-theme 'atom-dark t)
