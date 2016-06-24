@@ -36,9 +36,10 @@
 (set-buffer-file-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 ; ctags
-(setq tags-revert-without-query t)
-(setq ctags-command "ctags -R --fields=\"+afikklmnsSzt\" ")
-(global-set-key (kbd "<f5>") 'ctags-create-or-update-tags-table)
-(global-set-key (kbd "M-.") 'ctags-search)
+;(require 'ctags nil t)
+;(setq tags-revert-without-query t)
+;(setq ctags-command "ctags -R --fields=\"+afikklmnsSzt\" ")
+;(global-set-key [f5] 'ctags-create-or-update-tags-table)
+;(global-set-key "\M-." 'ctags-search)
 ; color-theme
 (load-theme 'atom-dark t)
