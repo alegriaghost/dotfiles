@@ -4,3 +4,9 @@
 [alias]
 	br = branch
 	co = checkout
+	rhh = reset --hard HEAD
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
