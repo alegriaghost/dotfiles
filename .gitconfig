@@ -1,5 +1,5 @@
 [user]
-	name = alegriaghost
+	name = ma2oka
 	email = alegriaghost@gmail.com
 [core]
 	excludesfile = /Users/matsuoka/.gitignore_global
@@ -12,3 +12,5 @@
 [alias]
 	co = checkout
 	br = branch
+[ghq]
+	root = /Users/matsuoka/Dev
