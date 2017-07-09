@@ -1,20 +1,20 @@
 # Path Setting
 set -x PATH /usr/local/sbin $PATH
 set -x PATH /usr/local/bin $PATH
-set -x PATH /usr/local/opt/php70/bin $PATH
 set -x GOPATH $HOME/.go
 set -x PATH $GOPATH/bin $PATH
+#set -x PATH $HOME/.nodebrew/current/bin $PATH
 
 # Alias
-alias semacs 'sudo emacs'
-alias cf 'emacs ~/.config/fish/config.fish'
-alias scf 'source ~/.config/fish/config.fish'
-alias cdd 'cd ~/Dev'
 alias gst 'git status'
 
 function cd
   builtin cd $argv
-  ll
+  la
+end
+
+function gip
+  curl ipecho.net/plain; echo
 end
 
 # peco
@@ -28,8 +28,8 @@ function peco-ghq-repo -d "Search ghq repository path"
 end
 
 # studio-c3
-alias cds 'cd ~/Dev/studio-c3'
 alias ssh-l 'ssh main.jp-172588d65c1b672e@ssh421.lolipop.jp -p 2222'
+alias cdnagato 'cd ~/Dev/nagato/studio-c3-develop'
 
 # key-bind
 function fish_user_key_bindings
