@@ -23,6 +23,10 @@
 (ac-config-default)
 (ac-set-trigger-key "TAB")
 (setq ac-use-menu-map t)
+(add-hook 'js-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)))
 ; neotree
 (global-set-key [f8] 'neotree-toggle)
 ; emmet-mode setting
